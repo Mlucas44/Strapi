@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "films",
+  "info": {
+    "singularName": "film",
+    "pluralName": "films",
+    "displayName": "Film",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Duree": {
+      "type": "decimal"
+    },
+    "DateDeSortie": {
+      "type": "date"
+    },
+    "Genre": {
+      "type": "string"
+    },
+    "Classification": {
+      "type": "string"
+    },
+    "ImageAffiche": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "seances": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seance.seance",
+      "mappedBy": "Film"
+    }
+  }
+}

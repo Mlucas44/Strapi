@@ -1,0 +1,4 @@
+build
+node_modules
+.strapi-updater.json
+.package.json

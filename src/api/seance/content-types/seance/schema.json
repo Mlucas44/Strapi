@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seances",
+  "info": {
+    "singularName": "seance",
+    "pluralName": "seances",
+    "displayName": "Seance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Film": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::film.film",
+      "inversedBy": "seances"
+    },
+    "Salle": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::salle.salle",
+      "inversedBy": "seances"
+    },
+    "DateHeureSeance": {
+      "type": "datetime"
+    }
+  }
+}
